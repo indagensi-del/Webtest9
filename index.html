@@ -56,7 +56,7 @@
       --chip-active-bg: #1B2A4A;
       --chip-active-text: #F4E3BC;
       --nav-bg: rgba(252,251,248,.88);
-      --footer-bg: #16223D;
+      --footer-bg: #F4EFE3;
       --stripe-a: #efe7d6;
       --stripe-b: #e7ddc8;
       --vision-ink: #3c4a63;
@@ -68,42 +68,42 @@
     }
     html[data-theme="dark"] {
       --navy: #1B2A4A;
-      --navy-dark: #0B1120;
-      --bg-cream: #0F1626;
-      --bg-warm: #15203A;
-      --bg-hero: #14213B;
-      --bg-light: #0E1A1C;
-      --text-body: #BFC8DA;
-      --text-sub: #93A0BD;
-      --border: #2A3551;
-      --border-light: #2A3551;
-      --surface: #1A2540;
-      --surface-2: #141E36;
-      --surface-blue: #15233A;
-      --surface-blue-bd: #284162;
-      --surface-gold: #2A2417;
-      --surface-gold-bd: #4b4226;
-      --text-strong: #F1ECDF;
-      --text-faint: #7C89A8;
-      --nav-link: #C6CEDD;
-      --border-input: #34405E;
+      --navy-dark: #000000;
+      --bg-cream: #0B0B0D;
+      --bg-warm: #141416;
+      --bg-hero: #161618;
+      --bg-light: #0E0E10;
+      --text-body: #C4C4CC;
+      --text-sub: #9A9AA6;
+      --border: #2A2A30;
+      --border-light: #232327;
+      --surface: #1A1A1E;
+      --surface-2: #141417;
+      --surface-blue: #17171B;
+      --surface-blue-bd: #2C2C34;
+      --surface-gold: #221C12;
+      --surface-gold-bd: #463C24;
+      --text-strong: #F2EEE6;
+      --text-faint: #7E7E8A;
+      --nav-link: #C9C9D2;
+      --border-input: #313137;
       --btn-solid-bg: #B8893D;
-      --chip-bg: #1B2638;
-      --chip-bd: #2A3551;
-      --chip-text: #97A2BB;
+      --chip-bg: #1C1C20;
+      --chip-bd: #2A2A30;
+      --chip-text: #9A9AA6;
       --chip-active-bg: #B8893D;
-      --chip-active-text: #15203A;
-      --nav-bg: rgba(14,21,38,.85);
-      --footer-bg: #0B1120;
-      --stripe-a: #222D45;
-      --stripe-b: #1B2538;
-      --vision-ink: #CDD6E6;
+      --chip-active-text: #141109;
+      --nav-bg: rgba(10,10,12,.85);
+      --footer-bg: #060607;
+      --stripe-a: #232327;
+      --stripe-b: #1A1A1E;
+      --vision-ink: #D7D7DF;
       --mission-ink: #E7D6AD;
-      --quote-bg: #1B2742;
-      --quote-ink: #9DBEE0;
+      --quote-bg: #19191D;
+      --quote-ink: #D6C49A;
       --blue: #6FA0CE;
-      --hero-grad: linear-gradient(165deg, #14213B 0%, #0F1626 45%, #0E1A1C 100%);
-      --pray-grad: linear-gradient(180deg, #0E1A1C 0%, #1A1B12 100%);
+      --hero-grad: linear-gradient(165deg, #161618 0%, #0B0B0D 45%, #0E0E10 100%);
+      --pray-grad: linear-gradient(180deg, #0E0E10 0%, #16140E 100%);
     }
 
     html { scroll-behavior: smooth; font-size: 16px; }
@@ -1004,8 +1004,9 @@
     /* ── Footer ── */
     footer {
       background: var(--footer-bg);
-      color: #aeb8cf;
+      color: var(--text-sub);
       padding: 54px 24px 40px;
+      border-top: 1px solid var(--border);
     }
     .footer-inner {
       max-width: 1160px;
@@ -1027,10 +1028,10 @@
       font-family: 'Playfair Display', serif;
       font-weight: 700;
       font-size: 18px;
-      color: #fff;
+      color: var(--text-strong);
     }
-    .footer-tagline { font-size: 12px; margin-top: 2px; color: #8b97b3; }
-    .footer-rights { font-size: 13px; color: #7c89a8; }
+    .footer-tagline { font-size: 12px; margin-top: 2px; color: var(--text-faint); }
+    .footer-rights { font-size: 13px; color: var(--text-faint); }
 
     /* ── WhatsApp Float ── */
     .wa-float {
