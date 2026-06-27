@@ -1045,6 +1045,58 @@
       white-space: nowrap;
     }
 
+    /* ── STTAI brief ── */
+    #sttai {
+      padding: clamp(70px, 9vw, 120px) 24px;
+      background: var(--bg-warm);
+    }
+    .sttai-inner { max-width: 1160px; margin: 0 auto; }
+    .sttai-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: clamp(36px, 5vw, 64px);
+      align-items: center;
+    }
+    .sttai-desc {
+      font-size: clamp(15px, 1.6vw, 17px);
+      line-height: 1.78;
+      color: var(--text-body);
+      margin: 16px 0 18px;
+    }
+    .sttai-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-strong);
+      background: var(--surface-gold);
+      border: 1px solid var(--surface-gold-bd);
+      padding: 9px 16px;
+      border-radius: 999px;
+      margin-bottom: 26px;
+    }
+    .sttai-placeholder {
+      aspect-ratio: 4/3;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 18px 48px rgba(27,42,74,.12);
+      border: 1px solid var(--border-light);
+      background:
+        radial-gradient(circle at 30% 30%, rgba(184,137,61,.16), transparent 60%),
+        repeating-linear-gradient(45deg, var(--stripe-a), var(--stripe-a) 11px, var(--stripe-b) 11px, var(--stripe-b) 22px);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .sttai-placeholder span {
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 12px;
+      color: var(--text-sub);
+      background: var(--surface);
+      padding: 7px 13px;
+      border-radius: 8px;
+      letter-spacing: .04em;
+    }
+
     /* ── Church Family banner ── */
     #family {
       padding: clamp(70px, 9vw, 120px) 24px;
@@ -1113,6 +1165,7 @@
         <a href="#about"    data-i18n="nav.about"></a>
         <a href="#services" data-i18n="nav.services"></a>
         <a href="#weekly"   data-i18n="nav.weekly"></a>
+        <a href="#sttai"    data-i18n="nav.sttai"></a>
         <a href="#pray"     data-i18n="nav.pray"></a>
         <a href="#location" data-i18n="nav.location"></a>
         <a href="#contact"  data-i18n="nav.contact"></a>
@@ -1142,6 +1195,7 @@
       <a href="#about"    data-i18n="nav.about"></a>
       <a href="#services" data-i18n="nav.services"></a>
       <a href="#weekly"   data-i18n="nav.weekly"></a>
+      <a href="#sttai"    data-i18n="nav.sttai"></a>
       <a href="#pray"     data-i18n="nav.pray"></a>
       <a href="#location" data-i18n="nav.location"></a>
       <a href="#contact"  data-i18n="nav.contact"></a>
@@ -1238,6 +1292,26 @@
         <p class="section-subtitle" data-i18n="weekly.subtitle"></p>
       </div>
       <div class="activities-grid" id="activities-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== STTAI (brief) ===== -->
+  <section id="sttai">
+    <div class="sttai-inner">
+      <div class="sttai-grid">
+        <div data-reveal>
+          <p class="section-eyebrow" data-i18n="sttai.eyebrow"></p>
+          <h2 class="section-title" data-i18n="sttai.title"></h2>
+          <p class="sttai-desc" data-i18n="sttai.desc"></p>
+          <p class="sttai-badge"><span>🎓</span> <span data-i18n="sttai.badge"></span></p>
+          <a href="sttai.html" class="btn-outline"><span data-i18n="sttai.cta"></span> <span>→</span></a>
+        </div>
+        <div data-reveal style="transition-delay:.1s">
+          <div class="sttai-placeholder">
+            <span data-i18n="sttai.photo"></span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1403,7 +1477,7 @@
     // ── Translations ──
     const T = {
       en: {
-        nav: { home:'Home', about:'About', services:'Services & Events', weekly:'Activities', pray:'Pray', location:'Location', contact:'Contact' },
+        nav: { home:'Home', about:'About', services:'Services & Events', weekly:'Activities', sttai:'STTAI', pray:'Pray', location:'Location', contact:'Contact' },
         hero: {
           welcome: 'Welcome to',
           tagline: 'A place to belong, believe, and become — come and worship with our family in Christ.',
@@ -1476,6 +1550,14 @@
           submit: 'Send Message',
           thanks: 'Thank you for reaching out. We will be in touch soon.'
         },
+        sttai: {
+          eyebrow: 'Theological Education',
+          title: 'STT Anugrah Indonesia',
+          desc: 'Our church is a branch of STT Anugrah Indonesia (STTAI) — a Christian theological college equipping servants of God, pastors, and teachers. Study Scripture and ministry with us, connected to the main campus in Bandung.',
+          badge: 'Main campus: Bandung, West Java',
+          cta: 'Learn More',
+          photo: 'STTAI campus'
+        },
         family: {
           eyebrow: 'Our Community',
           title: 'Our Church Family',
@@ -1489,7 +1571,7 @@
       },
 
       id: {
-        nav: { home:'Beranda', about:'Tentang', services:'Ibadah & Acara', weekly:'Kegiatan', pray:'Doa', location:'Lokasi', contact:'Kontak' },
+        nav: { home:'Beranda', about:'Tentang', services:'Ibadah & Acara', weekly:'Kegiatan', sttai:'STTAI', pray:'Doa', location:'Lokasi', contact:'Kontak' },
         hero: {
           welcome: 'Selamat datang di',
           tagline: 'Tempat untuk menjadi bagian, percaya, dan bertumbuh — mari beribadah bersama keluarga kami di dalam Kristus.',
@@ -1562,6 +1644,14 @@
           submit: 'Kirim Pesan',
           thanks: 'Terima kasih telah menghubungi. Kami akan segera membalas.'
         },
+        sttai: {
+          eyebrow: 'Pendidikan Teologi',
+          title: 'STT Anugrah Indonesia',
+          desc: 'Gereja kami merupakan cabang dari STT Anugrah Indonesia (STTAI) — sekolah tinggi teologi yang memperlengkapi hamba Tuhan, pendeta, dan guru. Pelajari Firman dan pelayanan bersama kami, terhubung dengan kampus utama di Bandung.',
+          badge: 'Kampus utama: Bandung, Jawa Barat',
+          cta: 'Selengkapnya',
+          photo: 'kampus STTAI'
+        },
         family: {
           eyebrow: 'Komunitas Kami',
           title: 'Keluarga Gereja Kami',
@@ -1575,7 +1665,7 @@
       },
 
       bm: {
-        nav: { home:'Utama', about:'Tentang', services:'Ibadah & Acara', weekly:'Aktiviti', pray:'Doa', location:'Lokasi', contact:'Hubungi' },
+        nav: { home:'Utama', about:'Tentang', services:'Ibadah & Acara', weekly:'Aktiviti', sttai:'STTAI', pray:'Doa', location:'Lokasi', contact:'Hubungi' },
         hero: {
           welcome: 'Selamat datang ke',
           tagline: 'Tempat untuk dimiliki, mempercayai, dan bertumbuh — marilah beribadah bersama keluarga kami dalam Kristus.',
@@ -1648,6 +1738,14 @@
           submit: 'Hantar Mesej',
           thanks: 'Terima kasih kerana menghubungi. Kami akan membalas tidak lama lagi.'
         },
+        sttai: {
+          eyebrow: 'Pendidikan Teologi',
+          title: 'STT Anugrah Indonesia',
+          desc: 'Gereja kami merupakan cawangan STT Anugrah Indonesia (STTAI) — sebuah kolej teologi Kristian yang melengkapi hamba Tuhan, pendeta, dan guru. Pelajari Firman dan pelayanan bersama kami, terhubung dengan kampus utama di Bandung.',
+          badge: 'Kampus utama: Bandung, Jawa Barat',
+          cta: 'Ketahui Lebih Lanjut',
+          photo: 'kampus STTAI'
+        },
         family: {
           eyebrow: 'Komuniti Kami',
           title: 'Keluarga Gereja Kami',
@@ -1661,7 +1759,7 @@
       },
 
       zh: {
-        nav: { home:'首页', about:'关于', services:'聚会与活动', weekly:'活动', pray:'代祷', location:'地点', contact:'联系我们' },
+        nav: { home:'首页', about:'关于', services:'聚会与活动', weekly:'活动', sttai:'STTAI', pray:'代祷', location:'地点', contact:'联系我们' },
         hero: {
           welcome: '欢迎来到',
           tagline: '一个归属、相信、成长的地方 — 来与我们在基督里的大家庭一同敬拜。',
@@ -1733,6 +1831,14 @@
           messagePh: '我们能为你做些什么?',
           submit: '发送信息',
           thanks: '谢谢你的联系,我们会尽快回复。'
+        },
+        sttai: {
+          eyebrow: '神学教育',
+          title: 'STT Anugrah Indonesia 神学院',
+          desc: '我们的教会是 STT Anugrah Indonesia(STTAI)的分校 — 一所装备神的仆人、牧者与教师的基督教神学院。与我们一同研读圣经、学习事奉,并与万隆的主校区相连。',
+          badge: '主校区:西爪哇,万隆',
+          cta: '了解更多',
+          photo: 'STTAI 校园'
         },
         family: {
           eyebrow: '我们的群体',
@@ -1828,6 +1934,7 @@
         const lang = btn.getAttribute('data-lang');
         if (lang === currentLang) return;
         currentLang = lang;
+        try { localStorage.setItem('gbm-lang', lang); } catch (e) {}
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
         document.querySelectorAll('.lang-btn[data-lang="' + lang + '"]').forEach(b => b.classList.add('active'));
         applyLang(lang);
@@ -1906,7 +2013,14 @@
     });
 
     // ── Init ──
-    applyLang('en');
+    (function initLang() {
+      let saved = 'en';
+      try { const s = localStorage.getItem('gbm-lang'); if (s && T[s]) saved = s; } catch (e) {}
+      currentLang = saved;
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.lang-btn[data-lang="' + saved + '"]').forEach(b => b.classList.add('active'));
+      applyLang(saved);
+    })();
     observeRevealElements();
   </script>
 </body>
