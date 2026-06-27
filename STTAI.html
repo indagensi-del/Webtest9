@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STT Anugrah Indonesia (STTAI) — GBM</title>
+  <script>(function(){try{var t=localStorage.getItem('gbm-theme');if(t!=='light'&&t!=='dark'){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1B2A4A;
+      --navy-dark: #16223D;
+      --gold: #B8893D;
+      --gold-dark: #9a6f2c;
+      --blue: #2E5E8C;
+      --bg-cream: #FCFBF8;
+      --bg-warm: #F6F1E7;
+      --bg-hero: #FBF3E2;
+      --bg-light: #F0F5F2;
+      --text-body: #4a566f;
+      --text-sub: #7a8398;
+      --border: #ECE6D8;
+      --border-light: #efe9da;
+      /* semantic theme roles (light) */
+      --surface: #ffffff;
+      --surface-2: #FCFBF8;
+      --surface-blue: #EAF1F8;
+      --surface-blue-bd: #d8e5f1;
+      --surface-gold: #FBF3DF;
+      --surface-gold-bd: #f0e3c2;
+      --text-strong: #1B2A4A;
+      --text-faint: #9aa3b2;
+      --nav-link: var(--nav-link);
+      --border-input: #E1D9C6;
+      --btn-solid-bg: #1B2A4A;
+      --chip-bg: #F1ECE0;
+      --chip-bd: #E7E0D0;
+      --chip-text: #6b7488;
+      --chip-active-bg: #1B2A4A;
+      --chip-active-text: #F4E3BC;
+      --nav-bg: rgba(252,251,248,.88);
+      --footer-bg: #16223D;
+      --stripe-a: #efe7d6;
+      --stripe-b: #e7ddc8;
+      --vision-ink: #3c4a63;
+      --mission-ink: #5a4a2c;
+      --quote-bg: #FBF6EC;
+      --quote-ink: #2E5E8C;
+      --hero-grad: linear-gradient(165deg, #FBF3E2 0%, #FCFBF8 42%, #F0F5F2 100%);
+      --pray-grad: linear-gradient(180deg, #F0F5F2 0%, #FBF4E6 100%);
+    }
+    html[data-theme="dark"] {
+      --navy: #1B2A4A;
+      --navy-dark: #0B1120;
+      --bg-cream: #0F1626;
+      --bg-warm: #15203A;
+      --bg-hero: #14213B;
+      --bg-light: #0E1A1C;
+      --text-body: #BFC8DA;
+      --text-sub: #93A0BD;
+      --border: #2A3551;
+      --border-light: #2A3551;
+      --surface: #1A2540;
+      --surface-2: #141E36;
+      --surface-blue: #15233A;
+      --surface-blue-bd: #284162;
+      --surface-gold: #2A2417;
+      --surface-gold-bd: #4b4226;
+      --text-strong: #F1ECDF;
+      --text-faint: #7C89A8;
+      --nav-link: #C6CEDD;
+      --border-input: #34405E;
+      --btn-solid-bg: #B8893D;
+      --chip-bg: #1B2638;
+      --chip-bd: #2A3551;
+      --chip-text: #97A2BB;
+      --chip-active-bg: #B8893D;
+      --chip-active-text: #15203A;
+      --nav-bg: rgba(14,21,38,.85);
+      --footer-bg: #0B1120;
+      --stripe-a: #222D45;
+      --stripe-b: #1B2538;
+      --vision-ink: #CDD6E6;
+      --mission-ink: #E7D6AD;
+      --quote-bg: #1B2742;
+      --quote-ink: #9DBEE0;
+      --blue: #6FA0CE;
+      --hero-grad: linear-gradient(165deg, #14213B 0%, #0F1626 45%, #0E1A1C 100%);
+      --pray-grad: linear-gradient(180deg, #0E1A1C 0%, #1A1B12 100%);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      transition: background-color .3s ease, color .3s ease;
+      font-family: 'Mulish', sans-serif;
+      color: var(--text-strong);
+      background: var(--bg-cream);
+      overflow-x: hidden;
+    }
+
+    ::placeholder { color: var(--text-faint); }
+
+    /* ── Scroll reveal ── */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s cubic-bezier(.2,.7,.2,1), transform 0.7s cubic-bezier(.2,.7,.2,1);
+    }
+    [data-reveal].revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Animations ── */
+    @keyframes gbmPulse {
+      0%   { box-shadow: 0 0 0 0 rgba(37,211,102,.5); }
+      70%  { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+    }
+    @keyframes gbmFloat {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(-7px); }
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      z-index: 50;
+      background: var(--nav-bg);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      height: 72px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .nav-logo-icon {
+      height: 48px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .nav-logo-text { display: flex; flex-direction: column; line-height: 1; }
+    .nav-logo-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 19px;
+      color: var(--text-strong);
+      letter-spacing: .02em;
+    }
+    .nav-logo-sub {
+      font-size: 9.5px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-top: 3px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(10px, 1.6vw, 26px);
+      flex-wrap: wrap;
+      justify-content: center;
+      flex: 1;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--nav-link);
+      font-weight: 600;
+      font-size: 14px;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      background: var(--chip-bg);
+      border: 1px solid var(--chip-bd);
+      border-radius: 999px;
+      padding: 4px;
+      flex-shrink: 0;
+    }
+    .lang-btn {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Mulish', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex; align-items: center; gap: 5px;
+      transition: all .2s ease;
+      background: transparent;
+      color: var(--chip-text);
+    }
+    .lang-btn.active {
+      background: var(--chip-active-bg);
+      color: var(--chip-active-text);
+    }
+    .theme-toggle {
+      width: 40px; height: 40px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--text-strong);
+      cursor: pointer;
+      transition: color .25s ease, border-color .25s ease, background .25s ease;
+    }
+    .theme-toggle:hover { color: var(--gold); border-color: var(--gold); }
+    .theme-toggle svg { width: 19px; height: 19px; display: block; }
+    .theme-toggle .icon-sun { display: none; }
+    html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+
+    /* ── Mobile nav: hamburger toggle, drawer, overlay ── */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 42px; height: 42px;
+      padding: 0 9px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .nav-toggle span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: var(--text-strong);
+      border-radius: 2px;
+      transition: transform .3s ease, opacity .2s ease;
+    }
+    body.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    body.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+    body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 65;
+      background: rgba(22,34,61,.42);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+    }
+    body.nav-open .nav-overlay { opacity: 1; pointer-events: auto; }
+
+    .nav-drawer {
+      position: fixed;
+      top: 0; right: 0;
+      z-index: 70;
+      height: 100%;
+      width: min(82vw, 320px);
+      background: var(--bg-cream);
+      box-shadow: -14px 0 40px rgba(22,34,61,.18);
+      transform: translateX(100%);
+      transition: transform .3s ease;
+      display: flex;
+      flex-direction: column;
+      padding: 86px 28px 32px;
+      gap: 4px;
+      overflow-y: auto;
+    }
+    body.nav-open .nav-drawer { transform: translateX(0); }
+    .drawer-close {
+      position: absolute;
+      top: 18px; right: 20px;
+      width: 40px; height: 40px;
+      border: none;
+      background: transparent;
+      font-size: 32px;
+      line-height: 1;
+      color: var(--text-strong);
+      cursor: pointer;
+    }
+    .drawer-links {
+      display: flex;
+      flex-direction: column;
+    }
+    .drawer-links a {
+      text-decoration: none;
+      color: var(--nav-link);
+      font-weight: 600;
+      font-size: 17px;
+      padding: 14px 4px;
+      border-bottom: 1px solid var(--border);
+      transition: color .2s;
+    }
+    .drawer-links a:hover { color: var(--gold); }
+    .drawer-lang {
+      margin-top: 26px;
+      align-self: flex-start;
+    }
+
+    /* ── Hero ── */
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--hero-grad);
+      padding: 120px 24px 80px;
+      scroll-margin-top: 72px;
+    }
+    .hero-orb-1 {
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 420px; height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(184,137,61,.14), transparent 70%);
+      pointer-events: none;
+    }
+    .hero-orb-2 {
+      position: absolute;
+      bottom: -140px; left: -100px;
+      width: 460px; height: 460px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(46,94,140,.10), transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      text-align: center;
+      max-width: 840px;
+    }
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(52px, 11vw, 118px);
+      line-height: .95;
+      color: var(--text-strong);
+      letter-spacing: -.01em;
+    }
+    .hero-subtitle {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(20px, 3.2vw, 32px);
+      color: var(--blue);
+      margin-top: 10px;
+      font-weight: 500;
+    }
+    .hero-tagline {
+      font-size: clamp(16px, 2vw, 20px);
+      line-height: 1.65;
+      color: var(--text-body);
+      max-width: 620px;
+      margin: 26px auto 0;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 38px;
+      padding: 16px 38px;
+      background: var(--gold);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: .02em;
+      box-shadow: 0 14px 30px rgba(184,137,61,.32);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .hero-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 38px rgba(184,137,61,.4);
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      animation: gbmFloat 2.6s ease-in-out infinite;
+    }
+    .hero-scroll span:first-child {
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+    }
+    .hero-scroll-line {
+      width: 1px;
+      height: 34px;
+      background: linear-gradient(#c9b07e, transparent);
+    }
+
+    /* ── Section shared ── */
+    section { scroll-margin-top: 72px; }
+    .section-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: clamp(30px, 4.4vw, 46px);
+      line-height: 1.08;
+      color: var(--text-strong);
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      font-size: clamp(15px, 1.6vw, 17px);
+      line-height: 1.7;
+      color: var(--text-body);
+    }
+    .section-header-centered {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 52px;
+    }
+
+    /* ── About ── */
+    #about {
+      padding: clamp(70px, 9vw, 120px) 24px;
+      background: var(--bg-cream);
+    }
+    .about-inner { max-width: 1160px; margin: 0 auto; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: clamp(36px, 5vw, 72px);
+      align-items: center;
+    }
+    .about-text p {
+      font-size: clamp(15px, 1.6vw, 17px);
+      line-height: 1.78;
+      color: var(--text-body);
+      margin-bottom: 18px;
+    }
+    .about-blockquote {
+      margin: 8px 0 0;
+      padding: 18px 24px;
+      border-left: 3px solid var(--gold);
+      background: var(--quote-bg);
+      border-radius: 0 12px 12px 0;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(17px, 2vw, 20px);
+      color: var(--quote-ink);
+      line-height: 1.5;
+    }
+    .about-photo-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pastor-photo {
+      width: 100%;
+      max-width: 380px;
+      aspect-ratio: 4/5;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(27,42,74,.16);
+      background: repeating-linear-gradient(45deg, var(--stripe-a), var(--stripe-a) 11px, var(--stripe-b) 11px, var(--stripe-b) 22px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pastor-photo span {
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 12px;
+      color: #9b8e6f;
+      background: rgba(252,251,248,.85);
+      padding: 7px 13px;
+      border-radius: 8px;
+      letter-spacing: .04em;
+    }
+    .pastor-photo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 28%;
+      display: block;
+    }
+    .pastor-info { text-align: center; margin-top: 20px; }
+    .pastor-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 23px;
+      color: var(--text-strong);
+    }
+    .pastor-title {
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-top: 7px;
+    }
+    .vm-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 24px;
+      margin-top: clamp(48px, 6vw, 80px);
+    }
+    .vm-card {
+      border-radius: 20px;
+      padding: clamp(28px, 3.5vw, 42px);
+      border: 1px solid;
+    }
+    .vm-card.vision {
+      background: var(--surface-blue);
+      border-color: var(--surface-blue-bd);
+    }
+    .vm-card.mission {
+      background: var(--surface-gold);
+      border-color: var(--surface-gold-bd);
+    }
+    .vm-card-header {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 16px;
+    }
+    .vm-icon {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .vm-icon.vision-icon { background: var(--blue); }
+    .vm-icon.mission-icon { background: var(--gold); }
+    .vm-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 26px;
+      color: var(--text-strong);
+    }
+    .vm-card p {
+      font-size: clamp(16px, 1.8vw, 19px);
+      line-height: 1.6;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+    .vm-card.vision p { color: var(--vision-ink); }
+    .vm-card.mission p { color: var(--mission-ink); }
+
+    /* ── Services ── */
+    #services {
+      padding: clamp(70px, 9vw, 120px) 24px;
+      background: var(--bg-warm);
+    }
+    .services-inner { max-width: 1160px; margin: 0 auto; }
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 26px;
+    }
+    .event-card {
+      background: var(--surface);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 34px rgba(27,42,74,.08);
+      border: 1px solid var(--border-light);
+      display: flex;
+      flex-direction: column;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .event-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(27,42,74,.13);
+    }
+    .event-photo {
+      aspect-ratio: 16/10;
+      background: repeating-linear-gradient(45deg, var(--stripe-a), var(--stripe-a) 11px, var(--stripe-b) 11px, var(--stripe-b) 22px);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .event-photo span {
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 11.5px;
+      color: #9b8e6f;
+      background: rgba(255,255,255,.82);
+      padding: 6px 12px;
+      border-radius: 7px;
+      letter-spacing: .04em;
+    }
+    .event-body {
+      padding: 22px 24px 26px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .event-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 11px;
+    }
+    .event-date {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+    .event-dot {
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: #cdbf9f;
+    }
+    .event-time {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-sub);
+    }
+    .event-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--text-strong);
+      margin-bottom: 9px;
+    }
+    .event-card p {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--text-body);
+    }
+    .see-all-wrap { text-align: center; margin-top: 48px; }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 15px 36px;
+      background: transparent;
+      color: var(--btn-solid-bg);
+      text-decoration: none;
+      border: 1.5px solid var(--btn-solid-bg);
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: all .25s ease;
+    }
+    .btn-outline:hover { background: var(--btn-solid-bg); color: #fff; }
+
+    /* ── Weekly Activities ── */
+    #weekly {
+      padding: clamp(70px, 9vw, 120px) 24px;
+      background: var(--bg-cream);
+    }
+    .weekly-inner { max-width: 1000px; margin: 0 auto; }
+    .activities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .activity-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 22px 24px;
+      box-shadow: 0 10px 28px rgba(27,42,74,.06);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .activity-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(27,42,74,.11);
+    }
+    .activity-icon {
+      width: 48px; height: 48px;
+      flex-shrink: 0;
+      border-radius: 14px;
+      background: var(--surface-gold);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold);
+      font-size: 22px;
+    }
+    .activity-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 19px;
+      color: var(--text-strong);
+      margin-bottom: 5px;
+      line-height: 1.25;
+    }
+    .activity-day {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    /* ── Pray ── */
+    #pray {
+      padding: clamp(70px, 9vw, 120px) 24px;
+      background: var(--pray-grad);
+    }
+    .pray-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .pray-inner .section-title { margin-bottom: 18px; }
+    .pray-encourage {
+      font-size: clamp(15px, 1.7vw, 18px);
+      line-height: 1.7;
+      color: var(--text-body);
+      margin-bottom: 38px;
+    }
+    .pray-form, .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      text-align: left;
+    }
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 15px 18px;
+      border: 1px solid var(--border-input);
+      border-radius: 13px;
+      background: var(--surface);
+      font-family: 'Mulish', sans-serif;
+      font-size: 15px;
+      color: var(--text-strong);
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+      resize: vertical;
+    }
+    .form-input:focus, .form-textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(184,137,61,.12);
+    }
+    .btn-primary {
+      padding: 15px 32px;
+      background: var(--gold);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-family: 'Mulish', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow: 0 12px 26px rgba(184,137,61,.28);
+      transition: transform .25s ease;
+      margin-top: 6px;
+    }
+    .btn-primary:hover { transform: translateY(-2px); }
+    .pray-success, .contact-success {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 42px 28px;
+      box-shadow: 0 14px 34px rgba(27,42,74,.08);
+      text-align: center;
+      display: none;
+    }
+    .pray-success.visible, .contact-success.visible { display: block; }
+    .success-icon {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 18px;
+      font-size: 26px;
+    }
+    .success-icon.pray-icon { background: var(--surface-blue); color: var(--blue); }
+    .success-icon.contact-icon { background: var(--surface-gold); color: var(--gold); }
+    .success-msg {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--text-strong);
+    }
+
+    /* ── Locations ── */
+    #location {
+      padding: clamp(70px, 9vw, 120px) 24px;
+      background: var(--bg-cream);
+    }
+    .location-inner { max-width: 1160px; margin: 0 auto; }
+    .branches-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+    .branch-card {
+      background: var(--surface);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 14px 38px rgba(27,42,74,.09);
+      border: 1px solid var(--border-light);
+    }
+    .branch-card iframe {
+      width: 100%;
+      height: 240px;
+      border: 0;
+      display: block;
+    }
+    .branch-body { padding: 26px 28px 30px; }
+    .branch-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 24px;
+      color: var(--text-strong);
+      margin-bottom: 14px;
+    }
+    .branch-detail {
+      display: flex;
+      gap: 10px;
+      font-size: 15px;
+      color: var(--text-body);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .branch-detail .icon { color: var(--gold); flex-shrink: 0; }
+    .branch-directions {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      padding: 12px 26px;
+      background: var(--btn-solid-bg);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: background .25s ease;
+    }
+    .branch-directions:hover { background: var(--gold); }
+
+    /* ── Contact ── */
+    #contact {
+      padding: clamp(70px, 9vw, 120px) 24px;
+      background: var(--bg-warm);
+    }
+    .contact-inner { max-width: 1080px; margin: 0 auto; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: clamp(36px, 5vw, 64px);
+      align-items: start;
+    }
+    .contact-info .section-title { margin-bottom: 18px; }
+    .contact-info .section-subtitle { margin-bottom: 30px; }
+    .contact-details { display: flex; flex-direction: column; gap: 18px; margin-bottom: 30px; }
+    .contact-label {
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-faint);
+      margin-bottom: 4px;
+    }
+    .contact-value {
+      font-size: 17px;
+      color: var(--text-strong);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-value:hover { color: var(--gold); }
+    .contact-value .sub {
+      font-weight: 500;
+      color: var(--text-sub);
+      font-size: 14px;
+    }
+    .socials-label {
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-faint);
+      margin-bottom: 12px;
+    }
+    .socials {
+      display: flex;
+      gap: 12px;
+    }
+    .social-btn {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-strong);
+      text-decoration: none;
+      transition: all .25s ease;
+    }
+    .social-btn:hover {
+      background: var(--btn-solid-bg);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .contact-form-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: clamp(26px, 3.5vw, 38px);
+      box-shadow: 0 14px 38px rgba(27,42,74,.08);
+    }
+    .contact-form .form-input,
+    .contact-form .form-textarea {
+      background: var(--surface-2);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .contact-form .btn-submit {
+      padding: 15px 32px;
+      background: var(--btn-solid-bg);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-family: 'Mulish', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background .25s ease;
+      width: 100%;
+    }
+    .contact-form .btn-submit:hover { background: var(--gold); }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--footer-bg);
+      color: #aeb8cf;
+      padding: 54px 24px 40px;
+    }
+    .footer-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-brand { display: flex; align-items: center; gap: 12px; }
+    .footer-logo {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, var(--gold), var(--gold-dark));
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 19px;
+    }
+    .footer-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: #fff;
+    }
+    .footer-tagline { font-size: 12px; margin-top: 2px; color: #8b97b3; }
+    .footer-rights { font-size: 13px; color: #7c89a8; }
+
+    /* ── WhatsApp Float ── */
+    .wa-float {
+      position: fixed;
+      bottom: 24px; right: 24px;
+      z-index: 60;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      background: var(--surface);
+      border-radius: 999px;
+      padding: 9px 18px 9px 9px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(0,0,0,.18);
+      border: 1px solid var(--border);
+      transition: transform .25s ease;
+    }
+    .wa-float:hover { transform: translateY(-3px); }
+    .wa-icon {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      animation: gbmPulse 2.2s infinite;
+    }
+    .wa-label {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text-strong);
+      white-space: nowrap;
+    }
+
+    /* ── STTAI brief ── */
+    #sttai {
+      padding: clamp(70px, 9vw, 120px) 24px;
+      background: var(--bg-warm);
+    }
+    .sttai-inner { max-width: 1160px; margin: 0 auto; }
+    .sttai-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: clamp(36px, 5vw, 64px);
+      align-items: center;
+    }
+    .sttai-desc {
+      font-size: clamp(15px, 1.6vw, 17px);
+      line-height: 1.78;
+      color: var(--text-body);
+      margin: 16px 0 18px;
+    }
+    .sttai-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-strong);
+      background: var(--surface-gold);
+      border: 1px solid var(--surface-gold-bd);
+      padding: 9px 16px;
+      border-radius: 999px;
+      margin-bottom: 26px;
+    }
+    .sttai-placeholder {
+      aspect-ratio: 4/3;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 18px 48px rgba(27,42,74,.12);
+      border: 1px solid var(--border-light);
+      background:
+        radial-gradient(circle at 30% 30%, rgba(184,137,61,.16), transparent 60%),
+        repeating-linear-gradient(45deg, var(--stripe-a), var(--stripe-a) 11px, var(--stripe-b) 11px, var(--stripe-b) 22px);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .sttai-placeholder span {
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 12px;
+      color: var(--text-sub);
+      background: var(--surface);
+      padding: 7px 13px;
+      border-radius: 8px;
+      letter-spacing: .04em;
+    }
+
+    /* ── Church Family banner ── */
+    #family {
+      padding: clamp(70px, 9vw, 120px) 24px;
+      background: var(--bg-cream);
+    }
+    .family-inner { max-width: 1100px; margin: 0 auto; }
+    .family-photo {
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(27,42,74,.16);
+      border: 1px solid var(--border-light);
+    }
+    .family-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      nav .lang-switcher { display: none; }
+      .nav-toggle { display: flex; }
+      .nav-overlay { display: block; }
+    }
+    @media (max-width: 640px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      /* Services & Events → horizontal swipe carousel on phone */
+      .events-grid {
+        display: flex;
+        grid-template-columns: none;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .events-grid::-webkit-scrollbar { display: none; }
+      .event-card {
+        flex: 0 0 82%;
+        scroll-snap-align: start;
+      }
+    }
+    @media (max-width: 480px) {
+      .wa-label { display: none; }
+      .wa-float { padding: 9px; }
+    }
+  </style>
+
+<style>
+  .nav-links a.active { color: var(--gold); }
+  #stt-hero { padding: 140px 24px 80px; background: var(--hero-grad); text-align: center; position: relative; overflow: hidden; }
+  .stt-hero-inner { max-width: 820px; margin: 0 auto; position: relative; }
+  .stt-hero-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(34px, 6vw, 64px); line-height: 1.04; color: var(--text-strong); letter-spacing: -.01em; }
+  .stt-hero-full { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(16px, 2.4vw, 24px); color: var(--blue); margin-top: 10px; }
+  .stt-hero-tagline { font-size: clamp(15px, 1.8vw, 19px); line-height: 1.7; color: var(--text-body); max-width: 660px; margin: 22px auto 0; }
+  .stt-hero-inner .sttai-badge { margin-top: 22px; }
+  .stt-cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 28px; }
+  .stt-cta-row .hero-cta { margin-top: 0; }
+  .page-section { padding: clamp(70px, 9vw, 120px) 24px; }
+  #stt-about { background: var(--bg-cream); }
+  #stt-vm { background: var(--bg-warm); }
+  #stt-programs { background: var(--bg-cream); }
+  #stt-branch { background: var(--bg-warm); }
+  #stt-contact { background: var(--bg-cream); }
+  .stt-wrap { max-width: 1160px; margin: 0 auto; }
+  .img-ph { aspect-ratio: 4/3; border-radius: 20px; overflow: hidden; border: 1px solid var(--border-light); box-shadow: 0 18px 48px rgba(27,42,74,.12); background: radial-gradient(circle at 30% 30%, rgba(184,137,61,.16), transparent 60%), repeating-linear-gradient(45deg, var(--stripe-a), var(--stripe-a) 11px, var(--stripe-b) 11px, var(--stripe-b) 22px); display: flex; align-items: center; justify-content: center; }
+  .img-ph span { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-sub); background: var(--surface); padding: 7px 13px; border-radius: 8px; letter-spacing: .04em; }
+  .prog-disclaim { font-size: 13px; color: var(--text-sub); text-align: center; margin-top: 26px; }
+  .prog-note { display:inline-flex; align-items:center; gap:9px; font-size:14px; font-weight:700; color: var(--text-strong); background: var(--surface-gold); border:1px solid var(--surface-gold-bd); padding:9px 16px; border-radius:999px; margin: 0 auto 36px; }
+  .prog-note-wrap { text-align:center; }
+  .stt-contact-list { display: flex; flex-direction: column; gap: 18px; max-width: 520px; margin: 8px auto 26px; }
+  .stt-contact-item .lbl { text-transform: uppercase; letter-spacing: .12em; font-size: 11px; font-weight: 700; color: var(--text-faint); margin-bottom: 4px; }
+  .stt-contact-item a, .stt-contact-item span.val { font-size: 17px; color: var(--text-strong); text-decoration: none; font-weight: 600; }
+  .stt-contact-item a:hover { color: var(--gold); }
+  .stt-center { text-align: center; }
+</style>
+
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img class="nav-logo-icon" src="data:image/png;base64,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" alt="I Love My Church — Gereja Bethel Malaysia">
+        <span class="nav-logo-text">
+          <span class="nav-logo-name">GBM</span>
+          <span class="nav-logo-sub">Gereja Bethel Malaysia</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#home" data-i18n="nav.home"></a>
+        <a href="index.html#about" data-i18n="nav.about"></a>
+        <a href="index.html#services" data-i18n="nav.services"></a>
+        <a href="index.html#weekly" data-i18n="nav.weekly"></a>
+        <a href="sttai.html" class="active" data-i18n="nav.sttai"></a>
+        <a href="index.html#pray" data-i18n="nav.pray"></a>
+        <a href="index.html#location" data-i18n="nav.location"></a>
+        <a href="index.html#contact" data-i18n="nav.contact"></a>
+      </div>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg></button>
+      <div class="lang-switcher"><button class="lang-btn" data-lang="id">🇮🇩 ID</button><button class="lang-btn active" data-lang="en">🇬🇧 EN</button><button class="lang-btn" data-lang="bm">🇲🇾 BM</button><button class="lang-btn" data-lang="zh">🇨🇳 中文</button></div>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-overlay"></div>
+  <aside id="mobile-drawer" class="nav-drawer" aria-hidden="true">
+    <button class="drawer-close" aria-label="Close menu">&times;</button>
+    <div class="drawer-links" role="navigation" aria-label="Site navigation">
+        <a href="index.html#home" data-i18n="nav.home"></a>
+        <a href="index.html#about" data-i18n="nav.about"></a>
+        <a href="index.html#services" data-i18n="nav.services"></a>
+        <a href="index.html#weekly" data-i18n="nav.weekly"></a>
+        <a href="sttai.html" class="active" data-i18n="nav.sttai"></a>
+        <a href="index.html#pray" data-i18n="nav.pray"></a>
+        <a href="index.html#location" data-i18n="nav.location"></a>
+        <a href="index.html#contact" data-i18n="nav.contact"></a>
+    </div>
+    <div class="lang-switcher drawer-lang"><button class="lang-btn" data-lang="id">🇮🇩 ID</button><button class="lang-btn active" data-lang="en">🇬🇧 EN</button><button class="lang-btn" data-lang="bm">🇲🇾 BM</button><button class="lang-btn" data-lang="zh">🇨🇳 中文</button></div>
+  </aside>
+
+  <!-- ===== HERO ===== -->
+  <section id="stt-hero">
+    <div class="hero-orb-1"></div>
+    <div class="hero-orb-2"></div>
+    <div class="stt-hero-inner" data-reveal>
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow"></p>
+      <h1 class="stt-hero-title" data-i18n="hero.title"></h1>
+      <p class="stt-hero-full" data-i18n="hero.full"></p>
+      <p class="stt-hero-tagline" data-i18n="hero.tagline"></p>
+      <p class="sttai-badge"><span>📍</span> <span data-i18n="hero.locnote"></span></p>
+      <div class="stt-cta-row">
+        <a class="hero-cta" href="https://anugrah.ac.id" target="_blank" rel="noopener"><span data-i18n="hero.ctaSite"></span> <span>↗</span></a>
+        <a class="btn-outline" href="#stt-contact"><span data-i18n="hero.ctaApply"></span> <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="stt-about" class="page-section">
+    <div class="stt-wrap">
+      <div class="about-grid">
+        <div data-reveal>
+          <p class="section-eyebrow" data-i18n="about.eyebrow"></p>
+          <h2 class="section-title" data-i18n="about.title"></h2>
+          <div class="about-text">
+            <p data-i18n="about.p1"></p>
+            <p data-i18n="about.p2"></p>
+            <p data-i18n="about.p3"></p>
+          </div>
+        </div>
+        <div data-reveal style="transition-delay:.1s">
+          <div class="img-ph"><span data-i18n="about.photo"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VISION & MISSION ===== -->
+  <section id="stt-vm" class="page-section">
+    <div class="stt-wrap">
+      <div class="section-header-centered" data-reveal>
+        <p class="section-eyebrow" data-i18n="vm.eyebrow"></p>
+        <h2 class="section-title" data-i18n="vm.title"></h2>
+      </div>
+      <div class="vm-grid">
+        <div class="vm-card vision" data-reveal>
+          <div class="vm-card-header"><span class="vm-icon vision-icon">✦</span><h3 data-i18n="vm.visionTitle"></h3></div>
+          <p data-i18n="vm.visionText"></p>
+        </div>
+        <div class="vm-card mission" data-reveal style="transition-delay:.1s">
+          <div class="vm-card-header"><span class="vm-icon mission-icon">✚</span><h3 data-i18n="vm.missionTitle"></h3></div>
+          <p data-i18n="vm.missionText"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAMS ===== -->
+  <section id="stt-programs" class="page-section">
+    <div class="stt-wrap">
+      <div class="section-header-centered" data-reveal>
+        <p class="section-eyebrow" data-i18n="programs.eyebrow"></p>
+        <h2 class="section-title" data-i18n="programs.title"></h2>
+        <p class="section-subtitle" data-i18n="programs.subtitle"></p>
+      </div>
+      <div class="prog-note-wrap" data-reveal><span class="prog-note">🎓 <span data-i18n="programs.note"></span></span></div>
+      <div class="events-grid">
+          <div class="event-card" data-reveal><div class="event-photo"><span data-i18n="programs.photo"></span></div><div class="event-body"><h3 data-i18n="programs.items.0.name"></h3><p data-i18n="programs.items.0.desc"></p></div></div>
+          <div class="event-card" data-reveal><div class="event-photo"><span data-i18n="programs.photo"></span></div><div class="event-body"><h3 data-i18n="programs.items.1.name"></h3><p data-i18n="programs.items.1.desc"></p></div></div>
+          <div class="event-card" data-reveal><div class="event-photo"><span data-i18n="programs.photo"></span></div><div class="event-body"><h3 data-i18n="programs.items.2.name"></h3><p data-i18n="programs.items.2.desc"></p></div></div>
+          <div class="event-card" data-reveal><div class="event-photo"><span data-i18n="programs.photo"></span></div><div class="event-body"><h3 data-i18n="programs.items.3.name"></h3><p data-i18n="programs.items.3.desc"></p></div></div>
+      </div>
+      <p class="prog-disclaim" data-reveal><span data-i18n="programs.disclaim"></span> <a href="https://anugrah.ac.id" target="_blank" rel="noopener" style="color:var(--gold);font-weight:700;text-decoration:none;">anugrah.ac.id ↗</a></p>
+    </div>
+  </section>
+
+  <!-- ===== GBM BRANCH ===== -->
+  <section id="stt-branch" class="page-section">
+    <div class="stt-wrap">
+      <div class="about-grid">
+        <div data-reveal>
+          <div class="img-ph"><span data-i18n="branch.photo"></span></div>
+        </div>
+        <div data-reveal style="transition-delay:.1s">
+          <p class="section-eyebrow" data-i18n="branch.eyebrow"></p>
+          <h2 class="section-title" data-i18n="branch.title"></h2>
+          <div class="about-text"><p data-i18n="branch.p1"></p></div>
+          <a class="hero-cta" href="https://wa.me/60165947555" target="_blank" rel="noopener" style="margin-top:8px;"><span data-i18n="branch.cta"></span> <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / OFFICIAL ===== -->
+  <section id="stt-contact" class="page-section">
+    <div class="stt-wrap">
+      <div class="section-header-centered" data-reveal>
+        <p class="section-eyebrow" data-i18n="contact.eyebrow"></p>
+        <h2 class="section-title" data-i18n="contact.title"></h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle"></p>
+      </div>
+      <div class="stt-contact-list" data-reveal>
+        <div class="stt-contact-item"><p class="lbl" data-i18n="contact.siteLabel"></p><a href="https://anugrah.ac.id" target="_blank" rel="noopener">anugrah.ac.id ↗</a></div>
+        <div class="stt-contact-item"><p class="lbl" data-i18n="contact.phoneLabel"></p><a href="https://wa.me/60165947555" target="_blank" rel="noopener">+60 16-594 7555 <span style="font-weight:500;color:var(--text-sub);font-size:14px;">(Bu Wita)</span></a></div>
+        <div class="stt-contact-item"><p class="lbl" data-i18n="contact.emailLabel"></p><a href="mailto:hello@gbm.org.my">hello@gbm.org.my</a></div>
+      </div>
+      <div class="stt-center" data-reveal>
+        <a class="btn-outline" href="https://anugrah.ac.id" target="_blank" rel="noopener"><span data-i18n="contact.visit"></span> <span>↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">G</span>
+        <div>
+          <p class="footer-name">GBM</p>
+          <p class="footer-tagline" data-i18n="footer.tagline"></p>
+        </div>
+      </div>
+      <p class="footer-rights" data-i18n="footer.rights"></p>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLOAT ===== -->
+  <a class="wa-float" href="https://wa.me/60165947555" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <span class="wa-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.5-.7-2.4-1.3-3.4-3-.3-.4.3-.4.7-1.2.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.5-.3z"/><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20z"/></svg></span>
+    <span class="wa-label" data-i18n="wa"></span>
+  </a>
+
+
+  <script>
+    const T = {
+      en: {
+        nav: { home:'Home', about:'About', services:'Services & Events', weekly:'Activities', sttai:'STTAI', pray:'Pray', location:'Location', contact:'Contact' },
+        hero: { eyebrow:'GBM × STTAI', title:'STT Anugrah Indonesia', full:'Sekolah Tinggi Teologi Anugrah Indonesia', tagline:'Equipping servants of God with integrity and skill — a theological college serving the church across Indonesia and beyond.', locnote:'Main campus: Bandung, West Java · A branch hosted by GBM', ctaSite:'Visit Official Site', ctaApply:'Admissions' },
+        about: { eyebrow:'About STTAI', title:'A College for the Church', p1:'STT Anugrah Indonesia (STTAI) is a Christian theological college dedicated to forming servants of God — pastors, teachers, and leaders — grounded in Scripture and shaped for ministry.', p2:'Its theology program received its Ministry of Religious Affairs license in 2011 and national BAN-PT accreditation in 2018, and today the college offers programs accredited “Baik” (Good).', p3:'Gereja Bethel Malaysia is proud to host a branch of STTAI, so students in Johor can pursue solid theological training locally while connected to the main campus in Bandung, West Java.', photo:'STTAI campus' },
+        vm: { eyebrow:'Our Foundation', title:'Vision & Mission', visionTitle:'Vision', visionText:'To be an excellent theological college producing servants of God of integrity, skilled to serve internationally.', missionTitle:'Mission', missionText:'To teach with Biblical integrity, to carry out the Tri Dharma of higher education, and to grow Christ-centred ministry skills.' },
+        programs: { eyebrow:'What You Can Study', title:'Programs', subtitle:'From undergraduate foundations to postgraduate research — training for every season of ministry.', note:'Programs accredited “Baik” (Good)', disclaim:'Programs and admissions vary by intake — see the official site for the current list:', photo:'program photo',
+          items:[
+            { name:'Bachelor of Theology (S1)', desc:'Biblical, doctrinal, and pastoral foundations for a lifetime of ministry.' },
+            { name:'Christian Education (S1, PAK)', desc:'Equipping teachers to disciple the next generation in schools and churches.' },
+            { name:'Master of Theology (S2)', desc:'Advanced study for pastors and leaders deepening their calling.' },
+            { name:'Doctor of Theology (S3)', desc:'Research and scholarship serving the church and the academy.' }
+          ] },
+        branch: { eyebrow:'Study in Johor', title:'The STTAI Branch at GBM', p1:'Through our partnership, GBM hosts STTAI classes locally — making theological education accessible to members and the wider community in Johor, without leaving for Bandung. Reach out to learn about intakes, schedules, and how to enrol.', cta:'Ask on WhatsApp', photo:'class / campus photo' },
+        contact: { eyebrow:'Find Out More', title:'Contact & Official Site', subtitle:'For full and current information, visit the official STTAI website.', siteLabel:'Website', phoneLabel:'Branch enquiries', emailLabel:'Email', visit:'Visit anugrah.ac.id' },
+        wa:'Chat with Us',
+        footer: { tagline:'Gereja Bethel Malaysia', rights:'© 2026 GBM — Gereja Bethel Malaysia. All rights reserved.' }
+      },
+      id: {
+        nav: { home:'Beranda', about:'Tentang', services:'Ibadah & Acara', weekly:'Kegiatan', sttai:'STTAI', pray:'Doa', location:'Lokasi', contact:'Kontak' },
+        hero: { eyebrow:'GBM × STTAI', title:'STT Anugrah Indonesia', full:'Sekolah Tinggi Teologi Anugrah Indonesia', tagline:'Memperlengkapi hamba Tuhan yang berintegritas dan terampil — sekolah tinggi teologi yang melayani gereja di Indonesia dan sekitarnya.', locnote:'Kampus utama: Bandung, Jawa Barat · Cabang yang diselenggarakan oleh GBM', ctaSite:'Kunjungi Situs Resmi', ctaApply:'Penerimaan' },
+        about: { eyebrow:'Tentang STTAI', title:'Sekolah Tinggi untuk Gereja', p1:'STT Anugrah Indonesia (STTAI) adalah sekolah tinggi teologi Kristen yang membentuk hamba Tuhan — pendeta, guru, dan pemimpin — berlandaskan Firman dan dipersiapkan untuk pelayanan.', p2:'Program teologinya memperoleh izin Kementerian Agama pada 2011 dan akreditasi BAN-PT pada 2018, dan kini menyelenggarakan program terakreditasi “Baik”.', p3:'Gereja Bethel Malaysia dengan bangga menjadi cabang STTAI, sehingga mahasiswa di Johor dapat menempuh pendidikan teologi yang kokoh secara lokal sambil terhubung dengan kampus utama di Bandung, Jawa Barat.', photo:'kampus STTAI' },
+        vm: { eyebrow:'Dasar Kami', title:'Visi & Misi', visionTitle:'Visi', visionText:'Menjadi perguruan tinggi teologi yang unggul, menghasilkan hamba Tuhan berintegritas dan terampil untuk melayani secara internasional.', missionTitle:'Misi', missionText:'Mengajar dengan integritas Alkitab, menyelenggarakan Tri Dharma perguruan tinggi, serta menumbuhkan keterampilan pelayanan yang berpusat pada Kristus.' },
+        programs: { eyebrow:'Yang Dapat Anda Pelajari', title:'Program Studi', subtitle:'Dari dasar sarjana hingga penelitian pascasarjana — pelatihan untuk setiap musim pelayanan.', note:'Program terakreditasi “Baik”', disclaim:'Program dan penerimaan dapat berbeda tiap angkatan — lihat situs resmi untuk daftar terkini:', photo:'foto program',
+          items:[
+            { name:'Sarjana Teologi (S1)', desc:'Dasar Alkitab, doktrin, dan pastoral untuk pelayanan seumur hidup.' },
+            { name:'Pendidikan Agama Kristen (S1)', desc:'Memperlengkapi guru untuk memuridkan generasi mendatang di sekolah dan gereja.' },
+            { name:'Magister Teologi (S2)', desc:'Studi lanjut bagi pendeta dan pemimpin untuk memperdalam panggilan.' },
+            { name:'Doktor Teologi (S3)', desc:'Penelitian dan keilmuan yang melayani gereja dan akademi.' }
+          ] },
+        branch: { eyebrow:'Belajar di Johor', title:'Cabang STTAI di GBM', p1:'Melalui kemitraan ini, GBM menyelenggarakan kelas STTAI secara lokal — membuat pendidikan teologi terjangkau bagi jemaat dan masyarakat luas di Johor, tanpa harus pergi ke Bandung. Hubungi kami untuk mengetahui angkatan, jadwal, dan cara mendaftar.', cta:'Tanya via WhatsApp', photo:'foto kelas / kampus' },
+        contact: { eyebrow:'Cari Tahu Lebih Lanjut', title:'Kontak & Situs Resmi', subtitle:'Untuk informasi lengkap dan terkini, kunjungi situs resmi STTAI.', siteLabel:'Situs', phoneLabel:'Pertanyaan cabang', emailLabel:'Email', visit:'Kunjungi anugrah.ac.id' },
+        wa:'Chat dengan Kami',
+        footer: { tagline:'Gereja Bethel Malaysia', rights:'© 2026 GBM — Gereja Bethel Malaysia. Hak cipta dilindungi.' }
+      },
+      bm: {
+        nav: { home:'Utama', about:'Tentang', services:'Ibadah & Acara', weekly:'Aktiviti', sttai:'STTAI', pray:'Doa', location:'Lokasi', contact:'Hubungi' },
+        hero: { eyebrow:'GBM × STTAI', title:'STT Anugrah Indonesia', full:'Sekolah Tinggi Teologi Anugrah Indonesia', tagline:'Melengkapi hamba Tuhan yang berintegriti dan mahir — sebuah kolej teologi yang melayani gereja di Indonesia dan sekitarnya.', locnote:'Kampus utama: Bandung, Jawa Barat · Cawangan dikendalikan oleh GBM', ctaSite:'Lawati Laman Rasmi', ctaApply:'Kemasukan' },
+        about: { eyebrow:'Tentang STTAI', title:'Kolej untuk Gereja', p1:'STT Anugrah Indonesia (STTAI) ialah sebuah kolej teologi Kristian yang membentuk hamba Tuhan — pendeta, guru, dan pemimpin — berpaksikan Firman dan disiapkan untuk pelayanan.', p2:'Program teologinya memperoleh lesen Kementerian Agama pada 2011 dan akreditasi BAN-PT pada 2018, dan kini menawarkan program terakreditasi “Baik”.', p3:'Gereja Bethel Malaysia berbangga menjadi cawangan STTAI, supaya pelajar di Johor dapat menimba pendidikan teologi yang mantap secara setempat sambil terhubung dengan kampus utama di Bandung, Jawa Barat.', photo:'kampus STTAI' },
+        vm: { eyebrow:'Asas Kami', title:'Visi & Misi', visionTitle:'Visi', visionText:'Menjadi kolej teologi yang cemerlang, menghasilkan hamba Tuhan berintegriti dan mahir untuk melayani di peringkat antarabangsa.', missionTitle:'Misi', missionText:'Mengajar dengan integriti Alkitab, melaksanakan Tri Dharma pengajian tinggi, serta memupuk kemahiran pelayanan berpusatkan Kristus.' },
+        programs: { eyebrow:'Apa Yang Boleh Anda Pelajari', title:'Program Pengajian', subtitle:'Daripada asas ijazah hingga penyelidikan pascasiswazah — latihan untuk setiap musim pelayanan.', note:'Program terakreditasi “Baik”', disclaim:'Program dan kemasukan berbeza mengikut ambilan — lihat laman rasmi untuk senarai terkini:', photo:'foto program',
+          items:[
+            { name:'Sarjana Teologi (S1)', desc:'Asas Alkitab, doktrin, dan pastoral untuk pelayanan seumur hidup.' },
+            { name:'Pendidikan Agama Kristian (S1)', desc:'Melengkapi guru untuk memuridkan generasi akan datang di sekolah dan gereja.' },
+            { name:'Sarjana Teologi (S2)', desc:'Pengajian lanjutan bagi pendeta dan pemimpin memperdalam panggilan.' },
+            { name:'Kedoktoran Teologi (S3)', desc:'Penyelidikan dan keilmuan yang melayani gereja dan akademia.' }
+          ] },
+        branch: { eyebrow:'Belajar di Johor', title:'Cawangan STTAI di GBM', p1:'Melalui kerjasama ini, GBM mengendalikan kelas STTAI secara setempat — menjadikan pendidikan teologi mudah dicapai oleh jemaah dan masyarakat di Johor, tanpa perlu ke Bandung. Hubungi kami untuk mengetahui ambilan, jadual, dan cara mendaftar.', cta:'Tanya di WhatsApp', photo:'foto kelas / kampus' },
+        contact: { eyebrow:'Ketahui Lebih Lanjut', title:'Hubungi & Laman Rasmi', subtitle:'Untuk maklumat lengkap dan terkini, lawati laman rasmi STTAI.', siteLabel:'Laman Web', phoneLabel:'Pertanyaan cawangan', emailLabel:'Emel', visit:'Lawati anugrah.ac.id' },
+        wa:'Sembang dengan Kami',
+        footer: { tagline:'Gereja Bethel Malaysia', rights:'© 2026 GBM — Gereja Bethel Malaysia. Hak cipta terpelihara.' }
+      },
+      zh: {
+        nav: { home:'首页', about:'关于', services:'聚会与活动', weekly:'活动', sttai:'STTAI', pray:'代祷', location:'地点', contact:'联系我们' },
+        hero: { eyebrow:'GBM × STTAI', title:'STT Anugrah Indonesia', full:'Sekolah Tinggi Teologi Anugrah Indonesia（印尼恩典神学院）', tagline:'装备具备正直与才干的神仆 — 一所服事印尼及其他地区教会的神学院。', locnote:'主校区：西爪哇，万隆 · 由 GBM 设立的分校', ctaSite:'访问官方网站', ctaApply:'招生' },
+        about: { eyebrow:'关于 STTAI', title:'为教会而设的学院', p1:'STT Anugrah Indonesia（STTAI）是一所基督教神学院，致力于塑造神的仆人 — 牧者、教师与领袖 — 以圣经为根基，为事奉装备。', p2:'其神学课程于 2011 年获得宗教事务部许可，并于 2018 年获得 BAN-PT 国家认证，如今开设获“Baik（良好）”认证的课程。', p3:'马来西亚伯特利教会（GBM）荣幸成为 STTAI 的分校，让柔佛的学生可以在本地接受扎实的神学装备，同时与西爪哇万隆的主校区相连。', photo:'STTAI 校园' },
+        vm: { eyebrow:'我们的根基', title:'异象与使命', visionTitle:'异象', visionText:'成为卓越的神学院，培养正直且具国际服事能力的神仆。', missionTitle:'使命', missionText:'以圣经的正直施教，履行高等教育的三大职责（Tri Dharma），并培养以基督为中心的事奉技能。' },
+        programs: { eyebrow:'你可以修读什么', title:'课程', subtitle:'从本科基础到研究生研究 — 为每个事奉阶段提供装备。', note:'课程获“Baik（良好）”认证', disclaim:'课程与招生因学期而异 — 最新名单请见官方网站：', photo:'课程照片',
+          items:[
+            { name:'神学学士 (S1)', desc:'为终身事奉打下圣经、教义与牧养的根基。' },
+            { name:'基督教教育 (S1)', desc:'装备教师在学校与教会中门训下一代。' },
+            { name:'神学硕士 (S2)', desc:'为牧者与领袖提供深化呼召的进阶课程。' },
+            { name:'神学博士 (S3)', desc:'以研究与学术服事教会与学界。' }
+          ] },
+        branch: { eyebrow:'在柔佛学习', title:'GBM 的 STTAI 分校', p1:'透过这项合作，GBM 在本地开设 STTAI 课程 — 让柔佛的会友与社区无需前往万隆即可接受神学教育。欢迎联系我们了解招生、时间表与报名方式。', cta:'透过 WhatsApp 询问', photo:'课堂 / 校园照片' },
+        contact: { eyebrow:'了解更多', title:'联系方式与官方网站', subtitle:'欲获取完整及最新资讯，请访问 STTAI 官方网站。', siteLabel:'网站', phoneLabel:'分校咨询', emailLabel:'电子邮箱', visit:'访问 anugrah.ac.id' },
+        wa:'与我们聊聊',
+        footer: { tagline:'Gereja Bethel Malaysia', rights:'© 2026 GBM — Gereja Bethel Malaysia. 版权所有。' }
+      }
+    };
+
+    let currentLang = 'en';
+    function get(obj, path){ return path.split('.').reduce((o,k)=> (o==null?undefined:o[k]), obj); }
+    function applyLang(lang){
+      const t = T[lang]; if(!t) return;
+      document.querySelectorAll('[data-i18n]').forEach(el=>{ const v=get(t, el.getAttribute('data-i18n')); if(v!=null) el.textContent=v; });
+      document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ const v=get(t, el.getAttribute('data-i18n-ph')); if(v!=null) el.placeholder=v; });
+      document.documentElement.lang = lang;
+    }
+    // Language switcher
+    document.querySelectorAll('.lang-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const lang=btn.getAttribute('data-lang'); if(lang===currentLang) return;
+        currentLang=lang;
+        try{ localStorage.setItem('gbm-lang', lang); }catch(e){}
+        document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+        document.querySelectorAll('.lang-btn[data-lang="'+lang+'"]').forEach(b=>b.classList.add('active'));
+        applyLang(lang); closeDrawer();
+      });
+    });
+    // Theme toggle
+    const themeToggle=document.querySelector('.theme-toggle');
+    if(themeToggle){ themeToggle.addEventListener('click', ()=>{ const isDark=document.documentElement.getAttribute('data-theme')==='dark'; const next=isDark?'light':'dark'; document.documentElement.setAttribute('data-theme', next); try{ localStorage.setItem('gbm-theme', next); }catch(e){} }); }
+    // Mobile drawer
+    const navToggle=document.querySelector('.nav-toggle');
+    const drawer=document.getElementById('mobile-drawer');
+    const overlay=document.querySelector('.nav-overlay');
+    function openDrawer(){ document.body.classList.add('nav-open'); navToggle.setAttribute('aria-expanded','true'); drawer.setAttribute('aria-hidden','false'); }
+    function closeDrawer(){ document.body.classList.remove('nav-open'); navToggle.setAttribute('aria-expanded','false'); drawer.setAttribute('aria-hidden','true'); }
+    navToggle.addEventListener('click', ()=>{ document.body.classList.contains('nav-open')?closeDrawer():openDrawer(); });
+    overlay.addEventListener('click', closeDrawer);
+    document.querySelector('.drawer-close').addEventListener('click', closeDrawer);
+    document.querySelectorAll('.drawer-links a').forEach(a=>a.addEventListener('click', closeDrawer));
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape'&&document.body.classList.contains('nav-open')) closeDrawer(); });
+    // Scroll reveal
+    let revealObserver=null;
+    function observeRevealElements(){
+      const els=document.querySelectorAll('[data-reveal]:not(.revealed)');
+      if('IntersectionObserver' in window){
+        if(!revealObserver){ revealObserver=new IntersectionObserver((entries)=>{ entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('revealed'); revealObserver.unobserve(en.target); } }); }, { threshold:0.08, rootMargin:'0px 0px -40px 0px' }); }
+        els.forEach(el=>revealObserver.observe(el));
+      } else { els.forEach(el=>el.classList.add('revealed')); }
+    }
+    // Init
+    (function initLang(){ let saved='en'; try{ const s=localStorage.getItem('gbm-lang'); if(s&&T[s]) saved=s; }catch(e){} currentLang=saved; document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active')); document.querySelectorAll('.lang-btn[data-lang="'+saved+'"]').forEach(b=>b.classList.add('active')); applyLang(saved); })();
+    observeRevealElements();
+  </script>
+
+</body>
+</html>
